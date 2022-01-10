@@ -20,4 +20,14 @@ public class CalculatorTests
         var result = _calculator.Add(a, b);
         Assert.Equal(result, a + b);
     }
+
+    [Theory]
+    [InlineData(1, 1)]
+    [InlineData(4, 3)]
+    [InlineData(10, 4)]
+    public void Divide_DividingTwoNumbers_ReturnCorrectResult(int a, int b)
+    {
+        var result = _calculator.Divide(a, b);
+        Assert.Equal(result, a / b);
+    }
 }
